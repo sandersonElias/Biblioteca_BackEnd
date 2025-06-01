@@ -5,29 +5,20 @@ public class Usuarios {
     //Atributos:
     private int id;
     private String nome;
-    private String email;
+    private String turma;
+    private int ano;
     private String senha;
-    private String cidade;
-    private String rua; 
-    private String bairro; 
-    private int numeroDaCasa; 
     private Livros livroEmprestado;
 
     //Construtor:
-    public Usuarios(int id ,String nome, String email, String senha, String cidade, String rua, String bairro, int numeroDaCasa, Livros livroEmprestado) {
+
+    public Usuarios(int id, String nome, String turma, int ano, String senha, Livros livroEmprestado) {
         this.id = id;
         this.nome = nome;
-        this.email = email;
+        this.turma = turma;
+        this.ano = ano;
         this.senha = senha;
-        this.cidade = cidade;
-        this.rua = rua;
-        this.bairro = bairro;
-        this.numeroDaCasa = numeroDaCasa;
         this.livroEmprestado = livroEmprestado;
-    }
-
-    public Usuarios() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getId() {
@@ -36,8 +27,8 @@ public class Usuarios {
 
     public void setId(int id) {
         this.id = id;
-    }    
-    
+    }
+
     public String getNome() {
         return nome;
     }
@@ -46,12 +37,20 @@ public class Usuarios {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getTurma() {
+        return turma;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTurma(String turma) {
+        this.turma = turma;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     public String getSenha() {
@@ -62,38 +61,6 @@ public class Usuarios {
         this.senha = senha;
     }
 
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getRua() {
-        return rua;
-    }
-
-    public void setRua(String rua) {
-        this.rua = rua;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public int getNumeroDaCasa() {
-        return numeroDaCasa;
-    }
-
-    public void setNumeroDaCasa(int numeroDaCasa) {
-        this.numeroDaCasa = numeroDaCasa;
-    }
-
     public Livros getLivroEmprestado() {
         return livroEmprestado;
     }
@@ -101,5 +68,4 @@ public class Usuarios {
     public void setLivroEmprestado(Livros livroEmprestado) {
         this.livroEmprestado = livroEmprestado;
     }
-      
 }

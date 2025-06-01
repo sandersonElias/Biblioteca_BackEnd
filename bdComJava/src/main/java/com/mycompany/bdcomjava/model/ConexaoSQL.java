@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ConexaoSQL {
        
-    private static final String url = "jdbc:mysql://localhost:3306/bancoBiblioteca?useSSL=false";
+    private static final String url = "jdbc:mysql://localhost:3306/bancobiblioteca?useSSL=false";
     private static final String user = "root";
-    private static final String password = "geovanna@2606";
+    private static final String password = "senha1234";
     
     private static Connection conexao = null;
     
@@ -16,11 +16,9 @@ public class ConexaoSQL {
     public static Connection getConexao() throws SQLException {
         if (conexao == null || conexao.isClosed()) {
             try {
-                // Carrega o driver JDBC (não necessário em versões modernas, mas mantido para compatibilidade)
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                // Estabelece a conexão
                 conexao = DriverManager.getConnection(url, user, password);
-                System.out.println("Conexão com o MySQL estabelecida com sucesso!");
+                System.out.println("Conexao com o MySQL estabelecida com sucesso!");
             } catch (ClassNotFoundException e) {
                 throw new SQLException("Driver JDBC não encontrado: " + e.getMessage());
             }
@@ -34,7 +32,7 @@ public class ConexaoSQL {
             try {
                 if (!conexao.isClosed()) {
                     conexao.close();
-                    System.out.println("Conexão com o MySQL fechada com sucesso!");
+                    System.out.println("Conexao com o MySQL fechada com sucesso!");
                 }
             } catch (SQLException e) {
                 System.err.println("Erro ao fechar a conexão: " + e.getMessage());

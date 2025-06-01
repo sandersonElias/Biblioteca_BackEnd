@@ -10,6 +10,7 @@ public class Livros {
     private String categoria;
 
     //Construtor:
+
     public Livros(String nome, Long isbn, String autor, Integer quantidade, String categoria) {
         this.nome = nome;
         this.isbn = isbn;
@@ -18,7 +19,6 @@ public class Livros {
         this.categoria = categoria;
     }
 
-    
     public String getNome() {
         return nome;
     }
@@ -57,5 +57,8 @@ public class Livros {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    } 
+    }
+    
+    
+
 }
